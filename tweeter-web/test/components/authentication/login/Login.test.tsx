@@ -8,7 +8,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { Presenter } from "../../../../src/presenters/Presenter";
 import { LoginPresenter } from "../../../../src/presenters/LoginPresenter";
 import { instance, mock, verify } from "@typestrong/ts-mockito";
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
 describe("Login Component", () => {
     it("starts with the sign-in button is disabled.", () => {
@@ -45,6 +45,9 @@ describe("Login Component", () => {
     });
 
     it("calls the presenter's login method with correct parameters when the sign-in button is pressed.", async () => {
+        console.log(
+            "it calls the presenter's login method with correct parameters when the sign-in button is pressed."
+        );
         const mockPresenter = mock<LoginPresenter>();
         const mockPresenterInstance = instance(mockPresenter);
 
@@ -62,7 +65,6 @@ describe("Login Component", () => {
 
         verify(mockPresenter.login(alias, password, originalUrl)).once();
         // verify(mockPresenter.login(expect.anything(), expect.anything(), expect.anything())).once();
-
     });
 });
 

@@ -25,7 +25,9 @@ const Login = (props: Props) => {
         displayErrorMessage: displayErrorMessage
     };
 
-    const [presenter] = useState(props.presenter ?? new LoginPresenter(listener));
+    const [presenter] = useState(
+        props.presenter ?? new LoginPresenter(listener)
+    );
 
     const { updateUserInfo } = useUserInfoHook();
     const navigate = useNavigate();
@@ -64,6 +66,7 @@ const Login = (props: Props) => {
     };
 
     const doLogin = async () => {
+        console.log("This is America - Donald Glover");
         // included in view layer bc hook is UI
         try {
             presenter.isLoading = true;

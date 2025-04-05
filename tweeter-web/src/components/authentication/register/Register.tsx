@@ -140,6 +140,7 @@ const Register = (props: Props) => {
 
     return (
         <AuthenticationFormLayout
+            ariaLabel="register"
             headingText="Please Register"
             submitButtonLabel="Register"
             oAuthHeading="Register with:"

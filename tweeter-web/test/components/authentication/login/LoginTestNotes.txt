@@ -1,0 +1,7 @@
+3 of 4 tests pass. The 4th test fails because mockPresenter.login isn't called at all.
+I tried it with the real login parameters, and with anything() parameters, no luck either way
+I'm 85% sure that the login method of the presenter is called in the Login.tsx code.
+The question is: is it called on the real presenter or the mock presenter?
+Maybe THAT'S why it's failing.
+If that's not it, or if I can't find a way to test it, I'll watch the Login test tutorial video to be sure that any changes prof made to
+the non-test code get made in my code.
